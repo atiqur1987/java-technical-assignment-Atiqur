@@ -1,5 +1,6 @@
 package kata.supermarket;
 
+import kata.supermarket.model.products.Product;
 import org.junit.jupiter.api.Test;
 
 import java.math.BigDecimal;
@@ -11,6 +12,6 @@ class ProductTest {
     @Test
     void singleItemHasExpectedUnitPriceFromProduct() {
         final BigDecimal price = new BigDecimal("2.49");
-        assertEquals(price, new Product(price).oneOf().price());
+        assertEquals(price, new Product(price,"0004").oneOf().price());
     }
 }
